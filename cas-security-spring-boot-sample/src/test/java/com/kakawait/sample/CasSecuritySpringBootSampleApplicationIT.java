@@ -19,7 +19,7 @@ import static com.kakawait.sample.CasSecuritySpringBootSampleApplication.*;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @SpringBootTest
-abstract class CasSecuritySpringBootSampleApplicationIT {
+class CasSecuritySpringBootSampleApplicationIT {
 
     @Autowired
     protected ApplicationContext applicationContext;
