@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1-ugent](https://github.com/kakawait/cas-security-spring-boot-starter/milestone/22) - 07 jul 2022
+
+- Apply pom code convention (https://maven.apache.org/developers/conventions/code.html#pom-code-convention)
+- Use java 11
+- Use spring-boot 2.7.1
+
 ## [1.1.0](https://github.com/kakawait/cas-security-spring-boot-starter/milestone/22) - 06 jul 2022
+
+[PR pending](https://github.com/kakawait/cas-security-spring-boot-starter/pull/163)
 
 - Apply pom code convention (https://maven.apache.org/developers/conventions/code.html#pom-code-convention)
 - Use java 11

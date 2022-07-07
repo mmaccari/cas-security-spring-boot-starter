@@ -9,7 +9,7 @@
     <parent>
         <groupId>com.kakawait</groupId>
         <artifactId>cas-security-spring-boot-parent</artifactId>
-        <version>1.1.0</version>
+        <version>1.1.1-ugent</version>
     </parent>
 
     <artifactId>spring-security-cas-extension</artifactId>
