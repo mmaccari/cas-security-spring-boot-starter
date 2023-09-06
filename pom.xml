@@ -9,7 +9,7 @@
     <groupId>com.kakawait</groupId>
     <artifactId>cas-security-spring-boot-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.1.2-ugent</version>
+    <version>1.3.0-ugent</version>
 
     <name>Cas security spring boot parent</name>
     <description>Spring boot starter for Apereo CAS client fully integrated with Spring security</description>
@@ -59,27 +59,27 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <java.version>11</java.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
 
         <!-- spring managed version -->
-        <jackson.version>2.14.2</jackson.version>
-        <jackson-databind.version>2.14.2</jackson-databind.version>
+        <jackson.version>2.15.2</jackson.version>
+        <jackson-databind.version>2.15.2</jackson-databind.version>
 
         <!-- dependencies -->
-        <spring-boot-dependencies.version>2.7.8</spring-boot-dependencies.version>
+        <spring-boot-dependencies.version>2.7.15</spring-boot-dependencies.version>
 
         <!-- test dependencies -->
-        <assertj-core.version>3.15.0</assertj-core.version>
-        <mockito-core.version>3.3.3</mockito-core.version>
+        <assertj-core.version>3.24.2</assertj-core.version>
+        <mockito-core.version>3.12.4</mockito-core.version>
 
         <!-- plugins -->
-        <jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
+        <jacoco-maven-plugin.version>0.8.10</jacoco-maven-plugin.version>
+        <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.5.0</maven-javadoc-plugin.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
-        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
+        <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
     </properties>
 
     <dependencyManagement>

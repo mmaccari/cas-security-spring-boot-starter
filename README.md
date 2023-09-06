@@ -26,8 +26,18 @@ Add the Spring boot starter to your project
 <dependency>
   <groupId>com.kakawait</groupId>
   <artifactId>cas-security-spring-boot-starter</artifactId>
-  <version>1.1.2-ugent</version>
+  <version>1.3.0-ugent</version>
 </dependency>
+```
+
+and use java 17
+
+```xml
+<properties>
+    <java.version>17</java.version>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+</properties>
 ```
 
 But be careful `1.x.x` version has some **breaking changes** if you comes from `0.x.x` version.

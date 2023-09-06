@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0-ugent](https://github.com/spring-projects/spring-boot/releases/tag/v2.7.15) - 05 sept 2023
+
+- Use spring-boot 2.7.15
+- Use java 17 (https://www.oracle.com/java/technologies/downloads/#java17)
+
 ## [1.1.2-ugent](https://github.com/kakawait/cas-security-spring-boot-starter/milestone/22) - 20 feb 2023
 
 - Use spring-boot 2.7.8
