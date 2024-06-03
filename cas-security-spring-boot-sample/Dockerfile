@@ -5,6 +5,6 @@ RUN mvn clean install && mvn -f cas-security-spring-boot-sample/pom.xml clean in
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-COPY --from=build /src/cas-security-spring-boot-sample/target/cas-security-spring-boot-sample-1.3.0-ugent.jar /app
+COPY --from=build /src/cas-security-spring-boot-sample/target/cas-security-spring-boot-sample-1.4.0-ugent.jar /app
 ENV JAVA_OPTS=""
-CMD [ "sh", "-c", "java $JAVA_OPTS -jar /app/cas-security-spring-boot-sample-1.3.0-ugent.jar" ]
+CMD [ "sh", "-c", "java $JAVA_OPTS -jar /app/cas-security-spring-boot-sample-1.4.0-ugent.jar" ]

@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0-ugent](https://github.com/spring-projects/spring-boot/releases/tag/v2.7.18) - 03 jun 2024
+
+- Use spring-boot 2.7.18
+
 ## [1.3.0-ugent](https://github.com/spring-projects/spring-boot/releases/tag/v2.7.15) - 05 sept 2023
 
 - Use spring-boot 2.7.15
