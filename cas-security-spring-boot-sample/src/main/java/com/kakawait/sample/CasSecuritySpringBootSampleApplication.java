@@ -7,8 +7,8 @@ import com.kakawait.spring.boot.security.cas.autoconfigure.CasSecurityProperties
 import com.kakawait.spring.security.cas.client.CasAuthorizationInterceptor;
 import com.kakawait.spring.security.cas.client.ticket.ProxyTicketProvider;
 import com.kakawait.spring.security.cas.client.validation.AssertionProvider;
-import org.jasig.cas.client.authentication.AttributePrincipal;
-import org.jasig.cas.client.authentication.AttributePrincipalImpl;
+import org.apereo.cas.client.authentication.AttributePrincipal;
+import org.apereo.cas.client.authentication.AttributePrincipalImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
