@@ -4,10 +4,10 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.List;
 
-import org.jasig.cas.client.configuration.ConfigurationKey;
-import org.jasig.cas.client.configuration.ConfigurationKeys;
-import org.jasig.cas.client.session.SingleSignOutFilter;
-import org.jasig.cas.client.validation.TicketValidator;
+import org.apereo.cas.client.configuration.ConfigurationKey;
+import org.apereo.cas.client.configuration.ConfigurationKeys;
+import org.apereo.cas.client.session.SingleSignOutFilter;
+import org.apereo.cas.client.validation.TicketValidator;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -39,4 +39,4 @@ security:
 
 logging:
   level:
-    org.jasig.cas.client.validation: debug
+    org.apereo.cas.client.validation: debug

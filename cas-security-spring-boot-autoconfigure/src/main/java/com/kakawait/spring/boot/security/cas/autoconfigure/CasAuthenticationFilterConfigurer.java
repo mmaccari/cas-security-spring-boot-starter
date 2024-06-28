@@ -2,7 +2,7 @@ package com.kakawait.spring.boot.security.cas.autoconfigure;
 
 import lombok.Setter;
 import lombok.experimental.Accessors;
-import org.jasig.cas.client.proxy.ProxyGrantingTicketStorage;
+import org.apereo.cas.client.proxy.ProxyGrantingTicketStorage;
 import org.springframework.security.cas.web.CasAuthenticationFilter;
 import org.springframework.security.cas.web.authentication.ServiceAuthenticationDetailsSource;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;

@@ -1,8 +1,8 @@
 package com.kakawait.spring.security.cas.authentication;
 
 import com.kakawait.spring.security.cas.web.authentication.ProxyCallbackAndServiceAuthenticationDetails;
-import org.jasig.cas.client.validation.Cas20ServiceTicketValidator;
-import org.jasig.cas.client.validation.TicketValidator;
+import org.apereo.cas.client.validation.Cas20ServiceTicketValidator;
+import org.apereo.cas.client.validation.TicketValidator;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;

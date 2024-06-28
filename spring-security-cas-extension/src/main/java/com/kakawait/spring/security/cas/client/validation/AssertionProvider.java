@@ -1,6 +1,6 @@
 package com.kakawait.spring.security.cas.client.validation;
 
-import org.jasig.cas.client.validation.Assertion;
+import org.apereo.cas.client.validation.Assertion;
 
 import javax.annotation.Nonnull;
 

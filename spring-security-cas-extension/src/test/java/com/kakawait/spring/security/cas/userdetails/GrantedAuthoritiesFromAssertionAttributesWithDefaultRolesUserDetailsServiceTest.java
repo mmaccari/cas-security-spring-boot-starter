@@ -1,7 +1,7 @@
 package com.kakawait.spring.security.cas.userdetails;
 
-import org.jasig.cas.client.authentication.AttributePrincipal;
-import org.jasig.cas.client.validation.Assertion;
+import org.apereo.cas.client.authentication.AttributePrincipal;
+import org.apereo.cas.client.validation.Assertion;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;

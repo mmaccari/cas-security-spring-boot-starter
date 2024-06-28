@@ -12,9 +12,9 @@ import com.kakawait.spring.security.cas.web.authentication.ProxyCallbackAndServi
 import com.kakawait.spring.security.cas.web.authentication.RequestAwareCasLogoutSuccessHandler;
 import lombok.Getter;
 import lombok.NonNull;
-import org.jasig.cas.client.proxy.ProxyGrantingTicketStorage;
-import org.jasig.cas.client.proxy.ProxyGrantingTicketStorageImpl;
-import org.jasig.cas.client.validation.ProxyList;
+import org.apereo.cas.client.proxy.ProxyGrantingTicketStorage;
+import org.apereo.cas.client.proxy.ProxyGrantingTicketStorageImpl;
+import org.apereo.cas.client.validation.ProxyList;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
