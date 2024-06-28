@@ -9,7 +9,7 @@ import org.springframework.mock.web.MockHttpServletResponse;
 import java.io.IOException;
 import java.net.URI;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 import static java.net.URLEncoder.encode;
 import static java.nio.charset.StandardCharsets.UTF_8;

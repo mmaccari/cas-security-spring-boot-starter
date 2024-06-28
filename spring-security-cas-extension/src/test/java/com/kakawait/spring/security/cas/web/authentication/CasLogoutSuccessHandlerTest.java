@@ -12,7 +12,7 @@ import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 import static java.net.URLEncoder.*;
 import static java.nio.charset.StandardCharsets.*;
