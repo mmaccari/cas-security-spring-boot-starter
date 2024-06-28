@@ -1,6 +1,7 @@
 package com.kakawait.spring.security.cas.web;
 
-import org.jasig.cas.client.util.CommonUtils;
+import org.apereo.cas.client.util.CommonUtils;
+import org.apereo.cas.client.util.URIBuilder;
 import org.springframework.security.cas.web.CasAuthenticationEntryPoint;
 import org.springframework.util.Assert;
 

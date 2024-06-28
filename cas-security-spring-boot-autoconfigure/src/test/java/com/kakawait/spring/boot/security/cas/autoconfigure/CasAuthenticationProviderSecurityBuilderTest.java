@@ -1,7 +1,7 @@
 package com.kakawait.spring.boot.security.cas.autoconfigure;
 
 import com.kakawait.spring.security.cas.authentication.DynamicProxyCallbackUrlCasAuthenticationProvider;
-import org.jasig.cas.client.validation.TicketValidator;
+import org.apereo.cas.client.validation.TicketValidator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

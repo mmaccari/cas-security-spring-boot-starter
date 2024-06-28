@@ -1,6 +1,6 @@
 package com.kakawait.spring.boot.security.cas.autoconfigure;
 
-import org.jasig.cas.client.proxy.ProxyGrantingTicketStorage;
+import org.apereo.cas.client.proxy.ProxyGrantingTicketStorage;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.security.cas.web.CasAuthenticationFilter;

@@ -9,9 +9,9 @@ import com.kakawait.spring.security.cas.client.validation.SecurityContextHolderA
 import com.kakawait.spring.security.cas.web.authentication.CasLogoutSuccessHandler;
 import com.kakawait.spring.security.cas.web.authentication.ProxyCallbackAndServiceAuthenticationDetailsSource;
 import com.kakawait.spring.security.cas.web.authentication.RequestAwareCasLogoutSuccessHandler;
-import org.jasig.cas.client.proxy.ProxyGrantingTicketStorage;
-import org.jasig.cas.client.proxy.ProxyGrantingTicketStorageImpl;
-import org.jasig.cas.client.validation.TicketValidator;
+import org.apereo.cas.client.proxy.ProxyGrantingTicketStorage;
+import org.apereo.cas.client.proxy.ProxyGrantingTicketStorageImpl;
+import org.apereo.cas.client.validation.TicketValidator;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanCreationException;
