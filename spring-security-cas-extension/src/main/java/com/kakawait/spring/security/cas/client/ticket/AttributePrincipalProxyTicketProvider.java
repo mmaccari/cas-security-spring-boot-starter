@@ -1,8 +1,8 @@
 package com.kakawait.spring.security.cas.client.ticket;
 
 import com.kakawait.spring.security.cas.client.validation.AssertionProvider;
-import org.jasig.cas.client.authentication.AttributePrincipal;
-import org.jasig.cas.client.validation.Assertion;
+import org.apereo.cas.client.authentication.AttributePrincipal;
+import org.apereo.cas.client.validation.Assertion;
 import org.springframework.util.Assert;
 
 /**

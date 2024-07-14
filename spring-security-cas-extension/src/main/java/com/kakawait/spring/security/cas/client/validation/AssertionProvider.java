@@ -1,8 +1,8 @@
 package com.kakawait.spring.security.cas.client.validation;
 
-import org.jasig.cas.client.validation.Assertion;
+import org.apereo.cas.client.validation.Assertion;
 
-import javax.annotation.Nonnull;
+import jakarta.annotation.Nonnull;
 
 /**
  * Assertion provider is simple interface that provides a way to get the current (user bounded) {@link Assertion}.

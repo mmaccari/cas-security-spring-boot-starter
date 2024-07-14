@@ -6,7 +6,7 @@ import org.springframework.security.cas.web.authentication.ServiceAuthentication
 
 import java.net.URI;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * @author Thibaud Leprêtre

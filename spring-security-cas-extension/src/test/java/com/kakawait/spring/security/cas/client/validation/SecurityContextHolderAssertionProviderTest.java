@@ -1,6 +1,6 @@
 package com.kakawait.spring.security.cas.client.validation;
 
-import org.jasig.cas.client.validation.AssertionImpl;
+import org.apereo.cas.client.validation.AssertionImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.cas.authentication.CasAuthenticationToken;

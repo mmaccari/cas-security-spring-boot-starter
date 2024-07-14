@@ -3,7 +3,7 @@ package com.kakawait.spring.boot.security.cas.autoconfigure;
 import com.kakawait.spring.security.cas.authentication.DynamicProxyCallbackUrlCasAuthenticationProvider;
 import lombok.Setter;
 import lombok.experimental.Accessors;
-import org.jasig.cas.client.validation.TicketValidator;
+import org.apereo.cas.client.validation.TicketValidator;
 import org.springframework.context.MessageSource;
 import org.springframework.security.cas.authentication.CasAssertionAuthenticationToken;
 import org.springframework.security.cas.authentication.CasAuthenticationProvider;

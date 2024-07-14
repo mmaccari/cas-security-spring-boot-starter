@@ -3,8 +3,8 @@ package com.kakawait.spring.boot.security.cas.autoconfigure;
 import lombok.NonNull;
 import lombok.Setter;
 import lombok.experimental.Accessors;
-import org.jasig.cas.client.session.SessionMappingStorage;
-import org.jasig.cas.client.session.SingleSignOutFilter;
+import org.apereo.cas.client.session.SessionMappingStorage;
+import org.apereo.cas.client.session.SingleSignOutFilter;
 import org.springframework.util.StringUtils;
 
 /**

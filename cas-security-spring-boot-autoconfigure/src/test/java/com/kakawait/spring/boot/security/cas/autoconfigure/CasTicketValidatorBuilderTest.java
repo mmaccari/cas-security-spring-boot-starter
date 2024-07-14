@@ -1,15 +1,15 @@
 package com.kakawait.spring.boot.security.cas.autoconfigure;
 
-import org.jasig.cas.client.proxy.ProxyGrantingTicketStorage;
-import org.jasig.cas.client.proxy.ProxyRetriever;
-import org.jasig.cas.client.ssl.HttpURLConnectionFactory;
-import org.jasig.cas.client.validation.Cas10TicketValidator;
-import org.jasig.cas.client.validation.Cas20ProxyTicketValidator;
-import org.jasig.cas.client.validation.Cas20ServiceTicketValidator;
-import org.jasig.cas.client.validation.Cas30ProxyTicketValidator;
-import org.jasig.cas.client.validation.Cas30ServiceTicketValidator;
-import org.jasig.cas.client.validation.ProxyList;
-import org.jasig.cas.client.validation.TicketValidator;
+import org.apereo.cas.client.proxy.ProxyGrantingTicketStorage;
+import org.apereo.cas.client.proxy.ProxyRetriever;
+import org.apereo.cas.client.ssl.HttpURLConnectionFactory;
+import org.apereo.cas.client.validation.Cas10TicketValidator;
+import org.apereo.cas.client.validation.Cas20ProxyTicketValidator;
+import org.apereo.cas.client.validation.Cas20ServiceTicketValidator;
+import org.apereo.cas.client.validation.Cas30ProxyTicketValidator;
+import org.apereo.cas.client.validation.Cas30ServiceTicketValidator;
+import org.apereo.cas.client.validation.ProxyList;
+import org.apereo.cas.client.validation.TicketValidator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

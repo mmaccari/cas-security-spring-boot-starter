@@ -2,7 +2,7 @@ package com.kakawait.spring.security.cas.authentication;
 
 import com.kakawait.spring.security.cas.client.validation.ProxyCallbackUrlAwareTicketValidator;
 import com.kakawait.spring.security.cas.web.authentication.ProxyCallbackAndServiceAuthenticationDetails;
-import org.jasig.cas.client.validation.Cas20ServiceTicketValidator;
+import org.apereo.cas.client.validation.Cas20ServiceTicketValidator;
 import org.springframework.security.cas.authentication.CasAuthenticationProvider;
 import org.springframework.security.core.Authentication;
 

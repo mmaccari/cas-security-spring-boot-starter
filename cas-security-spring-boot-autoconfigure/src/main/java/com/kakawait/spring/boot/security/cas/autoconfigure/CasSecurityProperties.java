@@ -101,14 +101,14 @@ public class CasSecurityProperties {
     public static class Server {
 
         /**
-         * CAS Server protocol version used to define which {@link org.jasig.cas.client.validation.TicketValidator} to
+         * CAS Server protocol version used to define which {@link org.apereo.cas.client.validation.TicketValidator} to
          * use.
          *
          * By default {@code ProxyTicketValidator} is selected rather than {@code ServiceTicketValidator}.
          *
-         * @see org.jasig.cas.client.validation.Cas30ProxyTicketValidator
-         * @see org.jasig.cas.client.validation.Cas20ProxyTicketValidator
-         * @see org.jasig.cas.client.validation.Cas10TicketValidationFilter
+         * @see org.apereo.cas.client.validation.Cas30ProxyTicketValidator
+         * @see org.apereo.cas.client.validation.Cas20ProxyTicketValidator
+         * @see org.apereo.cas.client.validation.Cas10TicketValidationFilter
          */
         private int protocolVersion = 3;
 
@@ -209,7 +209,7 @@ public class CasSecurityProperties {
              * fallback to {@link Service#baseUrl}
              *
              * @see Service#callbackBaseUrl
-             * @see org.jasig.cas.client.validation.Cas20ServiceTicketValidator
+             * @see org.apereo.cas.client.validation.Cas20ServiceTicketValidator
              */
             private String proxyCallback;
         }

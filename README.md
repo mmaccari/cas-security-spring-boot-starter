@@ -26,7 +26,7 @@ Add the Spring boot starter to your project
 <dependency>
   <groupId>com.kakawait</groupId>
   <artifactId>cas-security-spring-boot-starter</artifactId>
-  <version>2.0.0-ugent</version>
+  <version>3.0.0-ugent</version>
 </dependency>
 ```
 
@@ -330,7 +330,7 @@ Please checkout You can find sample usage for both on [`CasSecuritySpringBootSam
 
 In addition to `RestTemplate` integration, since `0.7.0` there are now two new autoconfigured beans:
 
-1. `AssertionProvider` that will provide you a way to retrieve the current (bounded to current authenticated request) `org.jasig.cas.client.validation.Assertion`
+1. `AssertionProvider` that will provide you a way to retrieve the current (bounded to current authenticated request) `org.apereo.cas.client.validation.Assertion`
 2. `ProxyTicketProvider` that will provide you a simple way to ask a _proxy ticket_ for a given service (regarding the current authenticated request)
 
 You can find sample usage for both on [`CasSecuritySpringBootSampleApplication`](https://github.com/kakawait/cas-security-spring-boot-starter/blob/master/cas-security-spring-boot-sample/src/main/java/com/kakawait/CasSecuritySpringBootSampleApplication.java)

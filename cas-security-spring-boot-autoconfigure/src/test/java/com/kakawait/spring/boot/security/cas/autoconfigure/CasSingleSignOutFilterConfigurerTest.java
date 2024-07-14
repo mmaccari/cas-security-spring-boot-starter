@@ -1,7 +1,7 @@
 package com.kakawait.spring.boot.security.cas.autoconfigure;
 
-import org.jasig.cas.client.session.SessionMappingStorage;
-import org.jasig.cas.client.session.SingleSignOutFilter;
+import org.apereo.cas.client.session.SessionMappingStorage;
+import org.apereo.cas.client.session.SingleSignOutFilter;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.test.util.ReflectionTestUtils;

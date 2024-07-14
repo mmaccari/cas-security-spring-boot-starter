@@ -1,6 +1,6 @@
 package com.kakawait.spring.boot.security.cas.autoconfigure;
 
-import org.jasig.cas.client.validation.TicketValidator;
+import org.apereo.cas.client.validation.TicketValidator;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 
