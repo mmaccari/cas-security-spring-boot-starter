@@ -142,14 +142,14 @@ public class CasSecurityProperties {
         @Data
         public static class Paths {
             /**
-             * CAS Server login path that will be append to {@link Server#baseUrl}
+             * CAS Server login path that will be appended to {@link Server#baseUrl}
              *
              * @see org.springframework.security.cas.web.CasAuthenticationEntryPoint
              */
             private String login = "/login";
 
             /**
-             * CAS Server logout path that will be append to {@link Server#baseUrl}
+             * CAS Server logout path that will be appended to {@link Server#baseUrl}
              */
             private String logout = "/logout";
         }
@@ -193,19 +193,19 @@ public class CasSecurityProperties {
         public static class Paths {
 
             /**
-             * CAS Service login path that will be append to {@link Service#baseUrl}
+             * CAS Service login path that will be appended to {@link Service#baseUrl}
              */
             private String login = "/login";
 
             /**
-             * CAS Service logout path that will be append to {@link Service#baseUrl}
+             * CAS Service logout path that will be appended to {@link Service#baseUrl}
              *
              * @see org.springframework.security.web.authentication.logout.LogoutFilter
              */
             private String logout = "/logout";
 
             /**
-             * CAS Service proxy callback path that will be append to {@link Service#callbackBaseUrl} if defined else
+             * CAS Service proxy callback path that will be appended to {@link Service#callbackBaseUrl} if defined else
              * fallback to {@link Service#baseUrl}
              *
              * @see Service#callbackBaseUrl

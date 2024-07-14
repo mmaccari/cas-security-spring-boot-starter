@@ -1,6 +1,5 @@
 package com.kakawait.spring.security.cas.web;
 
-import org.jasig.cas.client.util.CommonUtils;
 import org.springframework.security.cas.web.CasAuthenticationEntryPoint;
 import org.springframework.util.Assert;
 
@@ -34,8 +33,14 @@ public class RequestAwareCasAuthenticationEntryPoint extends CasAuthenticationEn
     @Override
     protected String createServiceUrl(HttpServletRequest request, HttpServletResponse response) {
         String serviceUrl = buildUrl(request, loginPath).orElse(loginPath.toASCIIString());
-        return CommonUtils.constructServiceUrl(null, response, serviceUrl, null,
-                getServiceProperties().getServiceParameter(), getServiceProperties().getArtifactParameter(), true);
+
+        String service = getServiceProperties().getServiceParameter();
+        if (service == null || service.isEmpty() || service.trim().isEmpty()) {
+            // should not happen
+            return response.encodeURL("service"); // TODO check this
+        } else {
+            return response.encodeURL(service);
+        }
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -47,3 +52,4 @@ public class RequestAwareCasAuthenticationEntryPoint extends CasAuthenticationEn
         return Optional.empty();
     }
 }
+

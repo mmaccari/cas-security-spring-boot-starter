@@ -33,7 +33,6 @@ import org.springframework.security.cas.web.CasAuthenticationEntryPoint;
 import org.springframework.security.cas.web.authentication.ServiceAuthenticationDetailsSource;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.util.Assert;
@@ -255,6 +254,7 @@ public class CasSecurityAutoConfiguration {
 
         @Override
         public void configure(HttpSecurity http) throws Exception {
+            // TODO use ??? .logout(logout -> logout.logoutUrl("/signout").permitAll())
             http.logout().permitAll().logoutSuccessHandler(logoutSuccessHandler);
         }
 
@@ -299,7 +299,7 @@ public class CasSecurityAutoConfiguration {
         protected SecurityFilterChain loginFilterChain(HttpSecurity http) throws Exception {
             String[] paths = getSecurePaths();
             if (paths.length > 0) {
-                http.requestMatchers().antMatchers(paths);
+                http.securityMatcher(paths); // TODO check this
                 CasHttpSecurityConfigurer.cas().configure(http);
 
                 CasSecurityProperties.SecurityAuthorizeMode mode = casSecurityProperties.getAuthorization().getMode();
