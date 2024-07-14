@@ -11,7 +11,7 @@
 
 ## Features
 
-- Spring boot 1 and 2 support.
+- Spring boot 1 and 2 support
 - Configures CAS authentication and authorization
 - Support dynamic service resolution based on current `HttpServletRequest`
 - Advance configuration through [CasSecurityConfigurerAdapter](https://github.com/kakawait/cas-security-spring-boot-starter/blob/master/cas-security-spring-boot-autoconfigure/src/main/java/com/kakawait/spring/boot/security/cas/CasSecurityConfigurerAdapter.java)

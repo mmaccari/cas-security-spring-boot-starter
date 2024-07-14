@@ -34,6 +34,7 @@ import org.springframework.security.cas.web.authentication.ServiceAuthentication
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
@@ -285,7 +286,7 @@ public class CasSecurityAutoConfiguration {
     }
 
     @Order(CAS_AUTH_ORDER)
-    static class CasLoginSecurityConfiguration extends WebSecurityConfigurerAdapter {
+    static class CasLoginSecurityConfiguration {
 
         private final CasSecurityProperties casSecurityProperties;
 
@@ -293,8 +294,9 @@ public class CasSecurityAutoConfiguration {
             this.casSecurityProperties = casSecurityProperties;
         }
 
-        @Override
-        protected void configure(HttpSecurity http) throws Exception {
+        @Bean
+        @Order(CAS_AUTH_ORDER)
+        protected SecurityFilterChain loginFilterChain(HttpSecurity http) throws Exception {
             String[] paths = getSecurePaths();
             if (paths.length > 0) {
                 http.requestMatchers().antMatchers(paths);
@@ -310,6 +312,8 @@ public class CasSecurityAutoConfiguration {
                     http.authorizeRequests().anyRequest().permitAll();
                 }
             }
+
+            return http.build();
         }
 
         private String[] getSecurePaths() {
