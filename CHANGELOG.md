@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [2.0.0-ugent](https://github.com/spring-projects/spring-boot/releases/tag/v2.7.18) - 13 jul 2024
 
-- start work on removing deprecation WebSecurityConfigurerAdapter (WIP)
+- Replace deprecated WebSecurityConfigurerAdapter by SecurityFilterChain
 
 ## [1.4.0-ugent](https://github.com/spring-projects/spring-boot/releases/tag/v2.7.18) - 03 jun 2024
 
