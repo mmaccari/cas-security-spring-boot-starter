@@ -1,8 +1,6 @@
 package com.kakawait.spring.security.cas.web;
 
 import org.apereo.cas.client.util.WebUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.cas.web.CasAuthenticationEntryPoint;
 import org.springframework.util.Assert;
 
@@ -37,7 +35,7 @@ public class RequestAwareCasAuthenticationEntryPoint extends CasAuthenticationEn
     @Override
     protected String createServiceUrl(HttpServletRequest request, HttpServletResponse response) {
         String serviceUrl = buildUrl(request, loginPath).orElse(loginPath.toASCIIString());
-        return WebUtils.constructServiceUrl(null, response, serviceUrl, null, // TODO try to replace this with a WebUtils call
+        return WebUtils.constructServiceUrl(null, response, serviceUrl, null,
                 getServiceProperties().getServiceParameter(), getServiceProperties().getArtifactParameter(), true);
     }
 

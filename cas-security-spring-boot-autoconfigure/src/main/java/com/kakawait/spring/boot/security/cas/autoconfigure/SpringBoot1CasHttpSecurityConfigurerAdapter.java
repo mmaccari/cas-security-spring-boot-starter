@@ -5,6 +5,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.cas.web.CasAuthenticationFilter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.util.ReflectionUtils;
@@ -32,10 +33,10 @@ class SpringBoot1CasHttpSecurityConfigurerAdapter extends CasSecurityConfigurerA
     @Override
     public void configure(HttpSecurity http) throws Exception {
         if (securityProperties.isRequireSsl()) {
-            http.requiresChannel().anyRequest().requiresSecure();
+            http.requiresChannel(channel -> channel.anyRequest().requiresSecure());
         }
         if (!securityProperties.isEnableCsrf()) {
-            http.csrf().disable();
+            http.csrf(AbstractHttpConfigurer::disable);
         }
         configureHeaders(http);
         if (securityProperties.getBasic().isEnabled()) {
@@ -49,7 +50,7 @@ class SpringBoot1CasHttpSecurityConfigurerAdapter extends CasSecurityConfigurerA
     private void configureHeaders(HttpSecurity http) throws Exception {
         Method method = ReflectionUtils.findMethod(Class.forName(SPRING_BOOT_WEB_SECURITY_CONFIGURATION_CLASS),
                 "configureHeaders", HeadersConfigurer.class, Class.forName(SECURITY_PROPERTIES_HEADERS_CLASS));
-        ReflectionUtils.invokeMethod(method, null, http.headers(), securityProperties.getHeaders());
+        ReflectionUtils.invokeMethod(method, null, http.headers(), securityProperties.getHeaders()); // TODO resolve deprecation of http.headers()
     }
 
     @SuppressWarnings("ConstantConditions")

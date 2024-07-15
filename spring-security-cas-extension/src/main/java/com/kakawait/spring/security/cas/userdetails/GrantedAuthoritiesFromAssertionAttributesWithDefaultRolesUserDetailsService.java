@@ -30,7 +30,7 @@ public class GrantedAuthoritiesFromAssertionAttributesWithDefaultRolesUserDetail
 
     private final Collection<? extends GrantedAuthority> defaultGrantedAuthorities;
 
-    private boolean toUppercase = true;
+    private final boolean toUppercase = true;
 
     public GrantedAuthoritiesFromAssertionAttributesWithDefaultRolesUserDetailsService(String[] attributes,
             Collection<? extends GrantedAuthority> defaultGrantedAuthorities) {

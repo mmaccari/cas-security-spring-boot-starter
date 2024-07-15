@@ -29,7 +29,7 @@ public class ProxyCallbackAndServiceAuthenticationDetailsSource extends ServiceA
     }
 
     @Override
-    public ServiceAuthenticationDetails buildDetails(HttpServletRequest context) {
+    public ServiceAuthenticationDetails buildDetails(HttpServletRequest context) {  // TODO resolve deprecation ServiceAuthenticationDetails
         serviceAuthenticationDetails.setContext(context);
         return serviceAuthenticationDetails;
     }

@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 /**
  * @author Thibaud Leprêtre
  */
-public interface ProxyCallbackAndServiceAuthenticationDetails extends ServiceAuthenticationDetails {
+public interface ProxyCallbackAndServiceAuthenticationDetails extends ServiceAuthenticationDetails {  // TODO resolve deprecation ServiceAuthenticationDetails
     String getProxyCallbackUrl();
 
     void setContext(HttpServletRequest context);

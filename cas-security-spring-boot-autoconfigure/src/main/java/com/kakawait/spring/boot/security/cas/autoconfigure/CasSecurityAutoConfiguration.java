@@ -15,6 +15,7 @@ import lombok.NonNull;
 import org.apereo.cas.client.proxy.ProxyGrantingTicketStorage;
 import org.apereo.cas.client.proxy.ProxyGrantingTicketStorageImpl;
 import org.apereo.cas.client.validation.ProxyList;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -23,7 +24,6 @@ import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -54,7 +54,7 @@ import static com.kakawait.spring.boot.security.cas.autoconfigure.CasSecurityPro
 /**
  * @author Thibaud Leprêtre
  */
-@Configuration
+@AutoConfiguration
 @ConditionalOnWebApplication
 @ConditionalOnClass(EnableWebSecurity.class)
 @Conditional(CasSecurityCondition.class)
@@ -254,8 +254,8 @@ public class CasSecurityAutoConfiguration {
 
         @Override
         public void configure(HttpSecurity http) throws Exception {
-            // TODO use ??? .logout(logout -> logout.logoutUrl("/signout").permitAll())
-            http.logout().permitAll().logoutSuccessHandler(logoutSuccessHandler);
+            //Original http.logout().permitAll().logoutSuccessHandler(logoutSuccessHandler);
+            http.logout(logout -> logout.permitAll().logoutSuccessHandler(logoutSuccessHandler)); // TODO check this: is this equivalent to commented line above me ?
         }
 
         @Override
@@ -299,17 +299,17 @@ public class CasSecurityAutoConfiguration {
         protected SecurityFilterChain loginFilterChain(HttpSecurity http) throws Exception {
             String[] paths = getSecurePaths();
             if (paths.length > 0) {
-                http.securityMatcher(paths); // TODO check this
+                http.securityMatcher(paths); // TODO check this: does this force security on all paths ?
                 CasHttpSecurityConfigurer.cas().configure(http);
 
                 CasSecurityProperties.SecurityAuthorizeMode mode = casSecurityProperties.getAuthorization().getMode();
                 if (mode == CasSecurityProperties.SecurityAuthorizeMode.ROLE) {
                     String[] roles = casSecurityProperties.getAuthorization().getRoles();
-                    http.authorizeRequests().anyRequest().hasAnyRole(roles);
+                    http.authorizeHttpRequests(auth -> auth.anyRequest().hasAnyRole(roles));
                 } else if (mode == CasSecurityProperties.SecurityAuthorizeMode.AUTHENTICATED) {
-                    http.authorizeRequests().anyRequest().authenticated();
+                    http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated());
                 } else if (mode == CasSecurityProperties.SecurityAuthorizeMode.NONE) {
-                    http.authorizeRequests().anyRequest().permitAll();
+                    http.authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
                 }
             }
 

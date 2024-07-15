@@ -74,7 +74,7 @@ public class CasHttpSecurityConfigurer extends AbstractHttpConfigurer<CasHttpSec
      * instead of
      *
      * <pre>{@code
-     * http.apply(CasHttpSecurityConfigurera.cas());
+     * http.apply(CasHttpSecurityConfigurer.cas());
      * }</pre>
      */
     @Override
@@ -191,7 +191,7 @@ public class CasHttpSecurityConfigurer extends AbstractHttpConfigurer<CasHttpSec
             } catch (NoSuchMethodException | SecurityException e) {
                 // since commit :
                 // https://github.com/apereo/java-cas-client/commit/fdc948b8ec697be0ae04da2f91c66c6526d463b5#diff-676b9d196aacd4b54bc978c62ccbacd8d29552fcd694061355bd930405560fb5
-                // setCasServerUrlPrefix(getString(ConfigurationKeys.CAS_SERVER_URL_PREFIX)); does NOT exists anymore
+                // setCasServerUrlPrefix(getString(ConfigurationKeys.CAS_SERVER_URL_PREFIX)); does NOT exist anymore
                 logger.info(
                         "Since apereo CAS client 3.6.0 setCasServerUrlPrefix(getString(ConfigurationKeys.CAS_SERVER_URL_PREFIX)); does NOT exists anymore");
             }
